@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "226202056609",
+    "project_id": "my-venues",
+    "storage_bucket": "my-venues.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226202056609:android:0e99accc29159992c0fde0",
+        "android_client_info": {
+          "package_name": "moti.venues"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226202056609-nl1phn33vtodrlk657b28tqc0o256fp0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "moti.venues",
+            "certificate_hash": "b0fc4a4bda00c35f064cd6a2cb98b1008c23d195"
+          }
+        },
+        {
+          "client_id": "226202056609-js68qtgvoirm206ele9uqd80lmbnc97u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCq3-VUhcT8z4ST5wDL1zL72jsd1D2y0Oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226202056609-js68qtgvoirm206ele9uqd80lmbnc97u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

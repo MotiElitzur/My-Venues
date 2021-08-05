@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Venues</string>
+    <string name="mapbox_access_token">sk.eyJ1IjoibW90aWVsIiwiYSI6ImNrcnVwOXo3cjBxZ2Eyb3F1OWxpazBrYzMifQ.gDAU1Np6SzCAE8GM6el67w</string>
+
+    <string name="venues_loading_message">No venues yet</string>
+    <string name="add_venue">Add Venue</string>
+    <string name="add_venue_name">Enter venue name</string>
+    <string name="add_venue_address">Enter venue address</string>
+    <string name="save_venue">Save</string>
+    <string name="save_venue_error">You must fill all the fields</string>
+    <string name="delete_venue_title">Delete Venue</string>
+    <string name="delete_venue_message">Are you sure you want to delete the venue?</string>
+</resources>

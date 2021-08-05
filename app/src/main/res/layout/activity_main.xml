@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.MainActivity">
+
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="venuesViewModel"
+            type="moti.venues.viewModel.VenuesViewModel" />
+
+        <variable
+            name="venuesAdapter"
+            type="moti.venues.view.VenuesAdapter" />
+
+        <variable
+            name="LoadingVisibility"
+            type="androidx.databinding.ObservableInt" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/venues_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="@dimen/_60sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:setAdapter="@{venuesAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.core.widget.ContentLoadingProgressBar
+            android:id="@+id/spinner_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:indeterminate="true"
+            android:visibility="@{LoadingVisibility}"
+            android:layout_gravity="center"
+            style="?android:attr/progressBarStyleLarge"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/loading_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            android:visibility="@{LoadingVisibility}"
+            android:text="@string/venues_loading_message"
+            android:textStyle="bold"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+
+            app:layout_constraintTop_toBottomOf="@id/spinner_loading"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_venue_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            app:srcCompat="@android:drawable/ic_input_add"
+            android:background="@color/my_blue"
+
+            android:onClick="@{()->venuesViewModel.onAddVenuePressed()}"
+
+            android:layout_margin="@dimen/_30sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
